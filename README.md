@@ -16,7 +16,7 @@ var stop = require('streamline-flamegraph/lib/record').start();
 
 This call will create a `perf-recorded.data` file in the current working directory of the process.
 
-The `stop` function can be called as `stop()` to stop recording but you don't need to call it if you want to record till the process is stopped.
+The `stop` function can be called as `stop()` to stop recording but you don't need to call it if you want to record till the process exits.
 
 ## Generating the flamegraph
 
@@ -37,7 +37,7 @@ API may still evolve so I haven't documented it yet.
 
 ## Credits
 
-Thanks to Brendan Gregg for great Perl script (`deps/flamegraph.pl`).
+Thanks to Brendan Gregg for the great Perl script (`deps/flamegraph.pl`).
 
 Thanks to @anodos for streamline's enter/exit hooks
 
