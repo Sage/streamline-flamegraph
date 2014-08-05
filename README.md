@@ -1,4 +1,4 @@
-Streamline flame graph generator based on Brendan Gregg's FlameGraph (https://github.com/brendangregg/FlameGraph)
+Streamline [flame graph](http://www.brendangregg.com/FlameGraphs/cpuflamegraphs.html) generator based on [Brendan Gregg's FlameGraph](https://github.com/brendangregg/FlameGraph)
 
 ## Installation
 
