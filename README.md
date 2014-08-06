@@ -11,20 +11,26 @@ npm install streamline-flamegraph -g
 First you need to instrument your code to record performance counters:
 
 ``` javascript
-var stop = require('streamline-flamegraph/lib/record').start();
+var recorder = require('streamline-flamegraph/lib/record').create();
+recorder.start();
 ```
 
-This call will create a `perf-recorded.data` file in the current working directory of the process.
+This will start the recording and create a `perf-recorded.data` file in the current working directory of the process.
 
-The `stop` function can be called as `stop()` to stop recording but you don't need to call it if you want to record till the process exits.
+The recording can be stopped by calling `recorder.stop()` but you don't need to call it if you want to record till the process exits.
 
 ## Generating the flamegraph
 
 Once you have recorded data, you need to transform it into a flame graph. This is done with a simple command:
 
 ```sh
-./gen-graph.sh
+bin/gen-graphs.sh
 ```
+
+This will generate two flame graphs in the current directory:
+
+* `perf-cpu.svg`: CPU only graph
+* `perf-full.svg`: CPU+IO graph
 
 ## Gotchas
 

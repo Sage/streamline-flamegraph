@@ -1,3 +1,5 @@
 node_modules
 /perf-*.data
 /perf-*.svg
+/palette.map
+/API.md
