@@ -3,7 +3,7 @@ Streamline [flame graph](http://www.brendangregg.com/FlameGraphs/cpuflamegraphs.
 ## Installation
 
 ``` sh
-npm install streamline-flamegraph -g
+npm install streamline-flamegraph
 ```
 
 ## Recording
