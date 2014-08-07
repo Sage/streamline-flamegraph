@@ -8,6 +8,12 @@ require('../lib/record').create().start();
 	function busyWait(_, ms) {
 		var t0 = Date.now();
 		while (Date.now() - t0 < ms);
+		// Strange: this is needed in fibers mode. Otherwise we get offsets in idleWait.
+		var t1 = Date.now();
+		setTimeout(function() { 
+			var delta = Date.now() - t1;
+			if (delta) console.log("!! BUSY CATCHUP: " + delta); 
+		}, 0);
 	}
 
 	function idleWait(_, ms) {
