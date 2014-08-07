@@ -8,12 +8,19 @@ require('../lib/record').create().start();
 	function busyWait(_, ms) {
 		var t0 = Date.now();
 		while (Date.now() - t0 < ms);
-		// Strange: this is needed in fibers mode. Otherwise we get offsets in idleWait.
+
+		// Strange: if we don't flush with a dummy timeout after busyWait we get incorrect wait times (too long)
+		// in the following setTimeout call.
 		var t1 = Date.now();
 		setTimeout(function() { 
 			var delta = Date.now() - t1;
 			if (delta) console.log("!! BUSY CATCHUP: " + delta); 
 		}, 0);
+	}
+
+	function invisibleWait(ms) {
+		var t0 = Date.now();
+		while (Date.now() - t0 < ms);
 	}
 
 	function idleWait(_, ms) {
@@ -22,6 +29,7 @@ require('../lib/record').create().start();
 
 	function f3(_) {
 		busyWait(_, 20);
+		invisibleWait(10);
 		idleWait(_, 30);
 	}
 
@@ -32,6 +40,7 @@ require('../lib/record').create().start();
 	function f1(_) {
 		busyWait(_, 100);
 		f2(_);
+		invisibleWait(50);
 		f2(_);
 		f3(_);
 		idleWait(_, 500);
