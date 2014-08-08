@@ -11,6 +11,7 @@ require('../lib/record').create().start();
 
 		// Strange: if we don't flush with a dummy timeout after busyWait we get incorrect wait times (too long)
 		// in the following setTimeout call.
+		// see https://github.com/joyent/node/issues/8105#issuecomment-51568352
 		var t1 = Date.now();
 		setTimeout(function() { 
 			var delta = Date.now() - t1;
