@@ -1,6 +1,6 @@
 Streamline [flame graph](http://www.brendangregg.com/FlameGraphs/cpuflamegraphs.html) generator based on [Brendan Gregg's FlameGraph](https://github.com/brendangregg/FlameGraph)
 
-![](examples/perf-full.svg?raw=true)
+![](examples/perf-full.png?raw=true)
 
 ## Installation
 
@@ -31,8 +31,8 @@ bin/gen-graphs.sh
 
 This will generate two flame graphs in the current directory:
 
-* [perf-cpu.svg](examples/perf-cpu.svg?raw=true): CPU only graph
-* [perf-full.svg](examples/perf-full.svg?raw=true): CPU+IO graph
+* [perf-cpu.svg](examples/perf-cpu.png?raw=true): CPU only graph
+* [perf-full.svg](examples/perf-full.png?raw=true): CPU+IO graph
 
 ## Gotchas
 
