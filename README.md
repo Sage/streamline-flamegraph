@@ -13,8 +13,7 @@ npm install streamline-flamegraph
 First you need to instrument your code to record performance counters:
 
 ``` javascript
-var recorder = require('streamline-flamegraph/lib/record').create();
-recorder.start();
+var recorder = require('streamline-flamegraph/lib/record').create().start();
 ```
 
 This will start the recording and create a `perf-recorded.data` file in the current working directory of the process.
@@ -38,7 +37,7 @@ This will generate two flame graphs in the current directory:
 
 The flamegraph only displays streamline stacks (but it displays the _async_ stacks). If you want a complete graph including sync JS calls and C++ stacks, see https://gist.github.com/trevnorris/9616784).
 
-The recorder only works in _callbacks_ mode for now.
+The [3 main streamline modes (callbacks, fibers, generators)](https://github.com/Sage/streamlinejs#generation-options) are supported, but streamline's [fast mode](https://github.com/Sage/streamlinejs#fast-mode) must be off.
 
 API may still evolve so I haven't documented it yet.
 
@@ -46,8 +45,6 @@ API may still evolve so I haven't documented it yet.
 ## Credits
 
 Thanks to Brendan Gregg for the great Perl script (`deps/flamegraph.pl`).
-
-Thanks to @anodos for streamline's enter/exit hooks
 
 ## License
 
