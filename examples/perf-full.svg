@@ -1,0 +1,91 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" width="600" height="210" onload="init(evt)" viewBox="0 0 600 210" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs >
+	<linearGradient id="background" y1="0" y2="1" x1="0" x2="0" >
+		<stop stop-color="#eeeeee" offset="5%" />
+		<stop stop-color="#eeeeb0" offset="95%" />
+	</linearGradient>
+</defs>
+<style type="text/css">
+	.func_g:hover { stroke:black; stroke-width:0.5; }
+</style>
+<script type="text/ecmascript">
+<![CDATA[
+	var details;
+	function init(evt) { details = document.getElementById("details").firstChild; }
+	function s(info) { details.nodeValue = "Function: " + info; }
+	function c() { details.nodeValue = ' '; }
+]]>
+</script>
+<rect x="0.0" y="0" width="600.0" height="210.0" fill="url(#background)"  />
+<text text-anchor="middle" x="300" y="24" font-size="17" font-family="Verdana" fill="rgb(0,0,0)"  >Flame Graph</text>
+<text text-anchor="" x="10" y="193" font-size="12" font-family="Verdana" fill="rgb(0,0,0)" id="details" > </text>
+<g class="func_g" onmouseover="s('busyWait (/Users/bruno/dev/streamline-flamegraph/examples/test._js:8) (40 samples, 4.22%)')" onmouseout="c()">
+<title>busyWait (/Users/bruno/dev/streamline-flamegraph/examples/test._js:8) (40 samples, 4.22%)</title><rect x="118.4" y="49" width="24.5" height="15.0" fill="rgb(219,24,10)" rx="2" ry="2" />
+<text text-anchor="" x="121.405491024287" y="59.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"  >b..</text>
+</g>
+<g class="func_g" onmouseover="s('io (59 samples, 6.23%)')" onmouseout="c()">
+<title>io (59 samples, 6.23%)</title><rect x="247.0" y="49" width="36.2" height="15.0" fill="rgb(0,255,255)" rx="2" ry="2" />
+<text text-anchor="" x="250.022175290391" y="59.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"  >io</text>
+</g>
+<g class="func_g" onmouseover="s('idleWait (/Users/bruno/dev/streamline-flamegraph/examples/test._js:27) (501 samples, 52.90%)')" onmouseout="c()">
+<title>idleWait (/Users/bruno/dev/streamline-flamegraph/examples/test._js:27) (501 samples, 52.90%)</title><rect x="283.2" y="81" width="306.8" height="15.0" fill="rgb(205,229,26)" rx="2" ry="2" />
+<text text-anchor="" x="286.157338965153" y="91.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"  >idleWait (/Users/bruno/dev/streamline-fla..</text>
+</g>
+<g class="func_g" onmouseover="s('f1 (/Users/bruno/dev/streamline-flamegraph/examples/test._js:41) (941 samples, 99.37%)')" onmouseout="c()">
+<title>f1 (/Users/bruno/dev/streamline-flamegraph/examples/test._js:41) (941 samples, 99.37%)</title><rect x="13.7" y="97" width="576.3" height="15.0" fill="rgb(215,176,15)" rx="2" ry="2" />
+<text text-anchor="" x="16.674762407603" y="107.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"  >f1 (/Users/bruno/dev/streamline-flamegraph/examples/test._js:41)</text>
+</g>
+<g class="func_g" onmouseover="s('f3 (/Users/bruno/dev/streamline-flamegraph/examples/test._js:31) (201 samples, 21.22%)')" onmouseout="c()">
+<title>f3 (/Users/bruno/dev/streamline-flamegraph/examples/test._js:31) (201 samples, 21.22%)</title><rect x="105.5" y="65" width="123.1" height="15.0" fill="rgb(228,69,32)" rx="2" ry="2" />
+<text text-anchor="" x="108.543822597677" y="75.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"  >f3 (/Users/brun..</text>
+</g>
+<g class="func_g" onmouseover="s('f3 (/Users/bruno/dev/streamline-flamegraph/examples/test._js:31) (89 samples, 9.40%)')" onmouseout="c()">
+<title>f3 (/Users/bruno/dev/streamline-flamegraph/examples/test._js:31) (89 samples, 9.40%)</title><rect x="228.6" y="81" width="54.6" height="15.0" fill="rgb(228,69,32)" rx="2" ry="2" />
+<text text-anchor="" x="231.648363252376" y="91.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"  >f3 (/..</text>
+</g>
+<g class="func_g" onmouseover="s('f2 (/Users/bruno/dev/streamline-flamegraph/examples/test._js:37) (201 samples, 21.22%)')" onmouseout="c()">
+<title>f2 (/Users/bruno/dev/streamline-flamegraph/examples/test._js:37) (201 samples, 21.22%)</title><rect x="105.5" y="81" width="123.1" height="15.0" fill="rgb(246,86,47)" rx="2" ry="2" />
+<text text-anchor="" x="108.543822597677" y="91.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"  >f2 (/Users/brun..</text>
+</g>
+<g class="func_g" onmouseover="s('io (501 samples, 52.90%)')" onmouseout="c()">
+<title>io (501 samples, 52.90%)</title><rect x="283.2" y="65" width="306.8" height="15.0" fill="rgb(0,255,255)" rx="2" ry="2" />
+<text text-anchor="" x="286.157338965153" y="75.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"  >io</text>
+</g>
+<g class="func_g" onmouseover="s('all (947 samples, 100%)')" onmouseout="c()">
+<title>all (947 samples, 100%)</title><rect x="10.0" y="161" width="580.0" height="15.0" fill="rgb(235,36,13)" rx="2" ry="2" />
+<text text-anchor="" x="13" y="171.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"  ></text>
+</g>
+<g class="func_g" onmouseover="s('test (/Users/bruno/dev/streamline-flamegraph/examples/test._js:7) (947 samples, 100.00%)')" onmouseout="c()">
+<title>test (/Users/bruno/dev/streamline-flamegraph/examples/test._js:7) (947 samples, 100.00%)</title><rect x="10.0" y="129" width="580.0" height="15.0" fill="rgb(233,82,12)" rx="2" ry="2" />
+<text text-anchor="" x="13" y="139.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"  >test (/Users/bruno/dev/streamline-flamegraph/examples/test._js:7)</text>
+</g>
+<g class="func_g" onmouseover="s('io (140 samples, 14.78%)')" onmouseout="c()">
+<title>io (140 samples, 14.78%)</title><rect x="142.9" y="33" width="85.7" height="15.0" fill="rgb(0,255,255)" rx="2" ry="2" />
+<text text-anchor="" x="145.903907074974" y="43.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"  >io</text>
+</g>
+<g class="func_g" onmouseover="s('idleWait (/Users/bruno/dev/streamline-flamegraph/examples/test._js:27) (59 samples, 6.23%)')" onmouseout="c()">
+<title>idleWait (/Users/bruno/dev/streamline-flamegraph/examples/test._js:27) (59 samples, 6.23%)</title><rect x="247.0" y="65" width="36.2" height="15.0" fill="rgb(205,229,26)" rx="2" ry="2" />
+<text text-anchor="" x="250.022175290391" y="75.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"  >idl..</text>
+</g>
+<g class="func_g" onmouseover="s('idleWait (/Users/bruno/dev/streamline-flamegraph/examples/test._js:27) (140 samples, 14.78%)')" onmouseout="c()">
+<title>idleWait (/Users/bruno/dev/streamline-flamegraph/examples/test._js:27) (140 samples, 14.78%)</title><rect x="142.9" y="49" width="85.7" height="15.0" fill="rgb(205,229,26)" rx="2" ry="2" />
+<text text-anchor="" x="145.903907074974" y="59.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"  >idleWait (..</text>
+</g>
+<g class="func_g" onmouseover="s('/Users/bruno/dev/streamline/bin/_node (947 samples, 100.00%)')" onmouseout="c()">
+<title>/Users/bruno/dev/streamline/bin/_node (947 samples, 100.00%)</title><rect x="10.0" y="145" width="580.0" height="15.0" fill="rgb(237,97,3)" rx="2" ry="2" />
+<text text-anchor="" x="13" y="155.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"  >/Users/bruno/dev/streamline/bin/_node</text>
+</g>
+<g class="func_g" onmouseover="s('busyWait (/Users/bruno/dev/streamline-flamegraph/examples/test._js:8) (20 samples, 2.11%)')" onmouseout="c()">
+<title>busyWait (/Users/bruno/dev/streamline-flamegraph/examples/test._js:8) (20 samples, 2.11%)</title><rect x="234.8" y="65" width="12.2" height="15.0" fill="rgb(219,24,10)" rx="2" ry="2" />
+</g>
+<g class="func_g" onmouseover="s('busyWait (/Users/bruno/dev/streamline-flamegraph/examples/test._js:8) (100 samples, 10.56%)')" onmouseout="c()">
+<title>busyWait (/Users/bruno/dev/streamline-flamegraph/examples/test._js:8) (100 samples, 10.56%)</title><rect x="44.3" y="81" width="61.2" height="15.0" fill="rgb(219,24,10)" rx="2" ry="2" />
+<text text-anchor="" x="47.2977824709609" y="91.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"  >busyWa..</text>
+</g>
+<g class="func_g" onmouseover="s('g1 (/Users/bruno/dev/streamline-flamegraph/examples/test._js:51) (942 samples, 99.47%)')" onmouseout="c()">
+<title>g1 (/Users/bruno/dev/streamline-flamegraph/examples/test._js:51) (942 samples, 99.47%)</title><rect x="13.1" y="113" width="576.9" height="15.0" fill="rgb(211,182,17)" rx="2" ry="2" />
+<text text-anchor="" x="16.0623020063358" y="123.5" font-size="12" font-family="Verdana" fill="rgb(0,0,0)"  >g1 (/Users/bruno/dev/streamline-flamegraph/examples/test._js:51)</text>
+</g>
+</svg>
