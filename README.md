@@ -1,4 +1,4 @@
-Streamline [flame graph](http://www.brendangregg.com/FlameGraphs/cpuflamegraphs.html) generator based on [Brendan Gregg's FlameGraph](https://github.com/brendangregg/FlameGraph)
+[flame graph](http://www.brendangregg.com/FlameGraphs/cpuflamegraphs.html) generator for [streamline.js](https://github.com/Sage/streamlinejs), based on [Brendan Gregg's FlameGraph](https://github.com/brendangregg/FlameGraph)
 
 ![](examples/perf-full.png?raw=true)
 
