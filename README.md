@@ -56,7 +56,7 @@ You can pass the following configuration options to the `create` call.
 }
 ```
 
-The `sourceUrl` option allows you to create hyperlinks to the your github repository, or to open your favorite source editor (for example "subl://open/?url=file://{fullpath}&line={line}" for Sublime Text with `subl:// URL handler extension).
+The `sourceUrl` option allows you to create hyperlinks to the your github repository, or to open your favorite source editor (for example `"subl://open/?url=file://{fullpath}&line={line}"` for Sublime Text with `subl://` URL handler extension).
 
 ## Gotchas
 
