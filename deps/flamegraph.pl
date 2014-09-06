@@ -14,8 +14,8 @@
 #
 # The input is stack frames and sample counts formatted as single lines.  Each
 # frame in the stack is semicolon separated, with a space and count at the end
-# of the line.  These can be generated using DTrace with stackcollapse.pl,
-# and other tools using the stackcollapse variants.
+# of the line.  These can be generated using DTrace with stackfold.pl,
+# and other tools using the stackfold variants.
 #
 # The output graph shows relative presence of functions in stack samples.  The
 # ordering on the x-axis has no meaning; since the data is samples, time order
