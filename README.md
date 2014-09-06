@@ -16,7 +16,7 @@ First you need to instrument your code to record performance counters:
 var recorder = require('streamline-flamegraph/lib/record').create().start();
 ```
 
-This will start the recording and create a `perf-recorded.data` file in the current working directory of the process.
+This will start the recording and create a `perf-recorded.gz` file in the current working directory of the process.
 
 The recording can be stopped by calling `recorder.stop()` but you don't need to call it if you want to record till the process exits.
 
