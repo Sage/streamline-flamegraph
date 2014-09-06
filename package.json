@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "streamline": "~0.10.13",
-    "ez-streams": "~0.1.4"
+    "ez-streams": "~0.1.4",
+    "commander": "~2.3.0"
   },
   "author": "Bruno Jouhier"
 }
