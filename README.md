@@ -49,10 +49,10 @@ You can pass the following configuration options to the `create` call.
 	rate: 1,
 	// root of source tree (will be trimmed from full file names to get relative paths)
 	// by default: ""
-	sourceRoot: __dirname + '/node_modules',
+	sourceRoot: __dirname,
 	// pattern for source link URLs
 	// by default: "file://{fullpath}#{line}"
-	sourceUrl: "https://github.com/Sage/streamline-flamegraph/tree/master/node_modules/{relpath}#L{line}",
+	sourceUrl: "https://github.com/Sage/streamline-flamegraph/tree/master/{relpath}#L{line}",
 }
 ```
 
