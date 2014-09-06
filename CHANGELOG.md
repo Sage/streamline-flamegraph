@@ -13,3 +13,7 @@ First working version
 ## v0.1.3
 2014-09-06
 * Forgot to include commander dependency in v0.1.2 - so I had to bump version and republish
+
+## v0.1.4
+2014-09-06
+* Previous npm publish failed (aaargh). Bumping again
