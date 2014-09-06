@@ -2,24 +2,29 @@
 
 ![](examples/perf-full.png?raw=true)
 
+<a name="installation"/>
 ## Installation
 
 ``` sh
 npm install streamline-flamegraph
 ```
 
+<a name="recording"/>
 ## Recording
 
 First you need to instrument your code to record performance counters:
 
 ``` javascript
-var recorder = require('streamline-flamegraph/lib/record').create().start();
+var recorder = require('streamline-flamegraph/lib/record').create(options).start();
 ```
 
 This will start the recording and create a `perf-recorded.gz` file in the current working directory of the process.
 
 The recording can be stopped by calling `recorder.stop()` but you don't need to call it if you want to record till the process exits.
 
+The `options` argument allows you to pass configuration parameters (see [below](#configuration))
+
+<a name="gen-graph"/>
 ## Generating the flamegraph
 
 Once you have recorded data, you need to transform it into a flame graph. This is done with a simple command:
@@ -32,6 +37,26 @@ This will generate two flame graphs in the current directory:
 
 * [perf-cpu.svg](examples/perf-cpu.png?raw=true): CPU only graph
 * [perf-full.svg](examples/perf-full.png?raw=true): CPU+IO graph
+
+<a name="configuration"/>
+## Configuration
+
+You can pass the following configuration options to the `create` call.
+
+``` javascript
+{
+	// sampling rate, in milliseconds, 1 by default
+	rate: 1,
+	// root of source tree (will be trimmed from full file names to get relative paths)
+	// by default: ""
+	sourceRoot: __dirname + '/node_modules',
+	// pattern for source link URLs
+	// by default: "file://{fullpath}#{line}"
+	sourceUrl: "https://github.com/Sage/streamline-flamegraph/tree/master/node_modules/{relpath}#L{line}",
+}
+```
+
+The `sourceUrl` option allows you to create hyperlinks to the your github repository, or to open your favorite source editor (for example "subl://open/?url=file://{fullpath}&line={line}" for Sublime Text with `subl:// URL handler extension).
 
 ## Gotchas
 
