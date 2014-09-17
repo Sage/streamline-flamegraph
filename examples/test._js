@@ -13,9 +13,9 @@ function test(_) {
 		// in the following setTimeout call.
 		// see https://github.com/joyent/node/issues/8105#issuecomment-51568352
 		var t1 = Date.now();
-		setTimeout(function() { 
+		setTimeout(function() {
 			var delta = Date.now() - t1;
-			if (delta) console.log("!! BUSY CATCHUP: " + delta); 
+			if (delta) console.log("!! BUSY CATCHUP: " + delta);
 		}, 0);
 	}
 
@@ -48,13 +48,31 @@ function test(_) {
 	}
 
 	var funnel = require('streamline/lib/util/flows').funnel(1);
+
 	function g1(_) {
 		return funnel(_, f1);
 	}
 
 	//f1(_);
 	g1(_);
+	// Graceful end for flame recorder. We can also simply call the stop() function of the flame recorder.
+	process.emit("SIGINT");
 }
+
+// Handle SIGINT for windows
+if (process.platform === "win32") {
+	require("readline").createInterface({
+		input: process.stdin,
+		output: process.stdout
+	}).on("SIGINT", function() {
+		process.emit("SIGINT");
+	});
+}
+
+process.on('SIGINT', function() {
+	setTimeout(process.exit, 100);
+});
+
 setImmediate(function() {
 	test(function(err) {
 		if (err) throw err;
