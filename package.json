@@ -1,7 +1,7 @@
 {
   "name": "streamline-flamegraph",
   "description": "Flame graphs for streamline.js",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "repository": {
     "type": "git",
     "url": "git://github.com/Sage/streamline-flamegraph.git"
@@ -10,8 +10,8 @@
     "node": ">=0.10.8"
   },
   "dependencies": {
-    "streamline": "^0.10.14",
-    "ez-streams": "^0.1.5",
+    "streamline": "^0.10.15",
+    "ez-streams": "^0.1.6",
     "commander": "~2.3.0"
   },
   "author": "Bruno Jouhier"
