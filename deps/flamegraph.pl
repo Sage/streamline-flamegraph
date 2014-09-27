@@ -108,6 +108,7 @@ GetOptions(
 	'colors=s'    => \$colors,
 	'hash'        => \$hash,
 	'cp'          => \$palette,
+	'palette=s'   => \$pal_file, # added by bruno.jouhier@sage.com
 ) or die <<USAGE_END;
 USAGE: $0 [options] infile > outfile.svg\n
 	--title       # change title text
