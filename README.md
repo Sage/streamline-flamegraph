@@ -15,7 +15,7 @@ npm install streamline-flamegraph
 First you need to instrument your code to record performance counters:
 
 ``` javascript
-var recorder = require('streamline-flamegraph/lib/record').create(options).start();
+var recorder = require('streamline-flamegraph/lib/record').create(options).run();
 ```
 
 This will start the recording and create a `perf-recorded.gz` file in the current working directory of the process.

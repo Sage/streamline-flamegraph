@@ -1,6 +1,6 @@
 "use strict";
 
-require('../lib/record').create().start();
+require('../lib/record').create().run();
 // Extra closure is needed in fibers mode, to ensure that recording is initialized before creating
 // wrappers for the hoisted functions.
 // Normally this is not a problem because recorder should be created from a separate loader file. 
