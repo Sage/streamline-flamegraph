@@ -5,11 +5,14 @@
 
 ## API
 
-* `fgf.fold(_, options)`  
-  Folds recorded data. The options are the following:  
-  `input`: the recorded data, as a reader or a filename.  
-  `output`: the output for the folded data, as a writer or a filename.  
-  `nameattr`: optional file name where `fold` will write the function name map.    
+* folded = `fgf.fold(_, input, options)`
+ reads recorded stack trace information, condenses equal stack traces and sorts the stack traces by file name and code line
+ The file names will be normalised as relative names with respect to the source root directory and will have slashes, no backslashes
+ as path separators
+
+input: the input stream (a text stream)
+options: exclude: pattern for excluding file names (when file name is tested, it is not yet normalized)
+         excludeInv: do not generate inverse stack frames
 * cvt = `fgf.converter(_, reader, options)`  
   Folds recorded data coming from `reader`.  
   Returns a function which can called as `cvt(_, full)` to obtain the SVG readers.  
