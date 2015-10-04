@@ -47,7 +47,7 @@ function test(_) {
 		idleWait(_, 500);
 	}
 
-	var funnel = require('streamline/lib/util/flows').funnel(1);
+	var funnel = require('streamline-runtime').flows.funnel(1);
 
 	function g1(_) {
 		return funnel(_, f1);
