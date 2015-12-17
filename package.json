@@ -1,7 +1,7 @@
 {
   "name": "streamline-flamegraph",
   "description": "Flame graphs for streamline.js",
-  "version": "0.1.7",
+  "version": "2.0.0",
   "author": "Bruno Jouhier",
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "streamline-runtime": "^1.0.15",
-    "ez-streams": "^1.2.1",
+    "ez-streams": "^2.0.0",
     "commander": "^2.9.0"
   }
 }
