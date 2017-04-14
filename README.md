@@ -3,6 +3,7 @@
 ![](examples/perf-full.png?raw=true)
 
 <a name="installation"/>
+
 ## Installation
 
 ``` sh
@@ -10,6 +11,7 @@ npm install streamline-flamegraph
 ```
 
 <a name="recording"/>
+
 ## Recording
 
 First you need to instrument your code to record performance counters:
@@ -25,6 +27,7 @@ The recording can be stopped by calling `recorder.stop()` but you don't need to 
 The `options` argument allows you to pass configuration parameters (see [below](#configuration))
 
 <a name="gen-graph"/>
+
 ## Generating the flamegraph
 
 Once you have recorded data, you need to transform it into a flame graph. This is done with a simple command:
@@ -39,6 +42,7 @@ This will generate two flame graphs in the current directory:
 * [perf-full.svg](examples/perf-full.png?raw=true): CPU+IO graph
 
 <a name="configuration"/>
+
 ## Configuration
 
 You can pass the following configuration options to the `create` call.
