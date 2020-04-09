@@ -8,11 +8,11 @@
     "url": "git://github.com/Sage/streamline-flamegraph.git"
   },
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=10.0.0"
   },
   "dependencies": {
-    "streamline-runtime": "^1.0.15",
-    "ez-streams": "^3.0.0",
-    "commander": "^2.9.0"
+    "streamline-runtime": "^2.0.1",
+    "ez-streams": "^4.0.0",
+    "commander": "^5.0.0"
   }
 }
